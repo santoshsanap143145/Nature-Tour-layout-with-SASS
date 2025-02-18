@@ -2,8 +2,8 @@ $color-primary : #55c57a;
 $color-primary-light : #7ed56f;
 $color-primary-dark : #28b485;
 
-// $color-primary-light-op : rgb(80, 197, 122,.8);
-// $color-primary-dark-op : rgb(40, 180, 133, .8);
+$color-primary-light-op : rgb($color-primary-light, 0.7);
+$color-primary-dark-op : rgb($color-primary-dark, .7);
 
 $color-secondary-light : #ffb900;
 $color-secondary-dark : #ff7730;

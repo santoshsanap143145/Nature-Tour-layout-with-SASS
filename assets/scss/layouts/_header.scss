@@ -1,0 +1,49 @@
+.hero-section {
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  background-image: linear-gradient(
+      to right bottom,
+      $color-primary-light-op,
+      $color-primary-dark-op
+    ),
+    url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  //   @include atCenter;
+  @extend %atCenter;
+  > .logo {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    width: 7rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.header {
+  .caption {
+    text-align: center;
+  } // .header-pri-heading
+  &-pri-heading {
+    font-size: 6rem;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 3rem;
+    font-weight: 400;
+    animation: moveInLeft 1s ease-in-out 1;
+  } // .header-sec-heading
+  &-sec-heading {
+    font-size: 2.4rem;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 5rem;
+    animation: moveInRight 1s ease-in-out 1;
+  }
+}

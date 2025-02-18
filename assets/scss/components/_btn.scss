@@ -1,0 +1,51 @@
+// .btn, .btn:link, .btn:visited{
+
+// }
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    cursor: pointer;
+    display: inline-block;
+    padding: 2rem 4rem;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    border: 0;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+  }
+  &-white{
+    background-color: $color-white;
+    color: $color-grey-dark;
+    font-size: 1.6rem;
+  }
+  &-green{
+    background-color: $color-primary;
+  }
+  &::before {
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5rem;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:is(:hover, :focus) { //.btn:hover
+    transform: translateY(-5px);
+    box-shadow: 0 10px 10px rgba($color-dark, 0.2);
+    &::before{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY();
+    box-shadow: 0 5px 5px rgba($color-dark, 0.4);
+  }
+}
